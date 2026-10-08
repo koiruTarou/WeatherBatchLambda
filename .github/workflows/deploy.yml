@@ -42,4 +42,4 @@ jobs:
         run: |
           dotnet lambda deploy-function WeatherBatchLambda \
             --project-location . \
-            --region ${{ secrets.AWS_REGION }} \
+            --region ${{ secrets.AWS_REGION }}
