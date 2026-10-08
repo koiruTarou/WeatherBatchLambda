@@ -41,9 +41,9 @@ jobs:
       - name: Restore
         run: dotnet restore WeatherBatchLambda.csproj
 
-      - name: Deploy to AWS Lambda (serverless)
+      - name: Deploy to AWS Lambda
         run: |
-          dotnet lambda deploy-serverless \
+          dotnet lambda deploy-function \
             --project-location . \
             --stack-name ${{ vars.STACK_NAME }} \
             --region ${{ secrets.AWS_REGION }} \
