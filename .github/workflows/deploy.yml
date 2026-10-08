@@ -39,7 +39,7 @@ jobs:
         run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
       - name: Restore
-        run: dotnet restore AspNetOnLambda.csproj
+        run: dotnet restore WeatherBatchLambda.csproj
 
       - name: Deploy to AWS Lambda (serverless)
         run: |
