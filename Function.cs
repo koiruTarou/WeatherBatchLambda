@@ -7,16 +7,15 @@ namespace WeatherBatchLambda;
 
 public class Function
 {
-    
-    /// <summary>
-    /// A simple function that takes a string and does a ToUpper
-    /// </summary>
-    /// <param name="input">The event for the Lambda function handler to process.</param>
-    /// <param name="context">The ILambdaContext that provides methods for logging and describing the Lambda environment.</param>
-    /// <returns></returns>
-    public string FunctionHandler(string input, ILambdaContext context)
+
+  public void FunctionHandler(object input, ILambdaContext context)
     {
-        //test
-        return input.ToUpper();
+        // 現在時刻と適当な気象データをログに出力
+        var now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        var temp = new Random().Next(10, 35); // 10℃〜35℃のランダムな値
+        
+        context.Logger.LogInformation($"[{now}] 定期バッチ実行中 - Temp={temp}°C, Condition=Cloudy");
     }
 }
+
+
