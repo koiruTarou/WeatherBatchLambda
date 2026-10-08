@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Weather Batch Lambda Template
+
+Resources:
+  WeatherBatchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: WeatherBatchLambda
+      # ハンドラーの文字列（プロジェクト名::名前空間.クラス名::メソッド名）
+      Handler: WeatherBatchLambda::WeatherBatchLambda.Function::FunctionHandler
+      Runtime: dotnet10
+      CodeUri: .  # WeatherBatchLambda.csproj があるディレクトリ
+      MemorySize: 256
+      Timeout: 60
+      Policies:
+        - AWSLambdaBasicExecutionRole # 基本的なログ出力権限をロールに自動付与

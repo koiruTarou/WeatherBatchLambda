@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeatherBatchLambda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad2d4f72ffe616f44481eff270d7e0a98495ea6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+810d92ddfdbea41bca23673a6788d44e938b153a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeatherBatchLambda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeatherBatchLambda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
