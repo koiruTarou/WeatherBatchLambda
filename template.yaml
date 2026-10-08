@@ -16,11 +16,11 @@ Resources:
       Policies:
         - AWSLambdaBasicExecutionRole # 基本的なログ出力権限をロールに自動付与
 
- # 10分毎に起動するスケジュール設定
+ # 5分毎に起動するスケジュール設定
       Events:
         TenMinuteTimer:
           Type: Schedule
           Properties:
-            Schedule: 'rate(10 minutes)' # 10分毎に実行
+            Schedule: 'rate(5 minutes)' # 5分毎に実行
             Name: WeatherBatch10MinSchedule
-            Description: Triggers Lambda every 10 minutes
+            Description: Triggers Lambda every 5 minutes
